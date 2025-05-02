@@ -1,0 +1,231 @@
+/* Background */
+.bodyspace {
+    background: linear-gradient(to right, #71b9f4, rgb(239, 101, 239), rgba(225, 9, 139, 0.99));
+    /* width: 100%;
+    height: 100%;
+    margin: 0%; */
+    height: 100%;
+
+}
+
+/* header */
+.header {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #e0f2fe;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    display: flex;
+    font-weight: bolder;
+
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    li {
+        padding: 15px 30px;
+        border-radius: 20px;
+        /* background-color: #5bbdf2; */
+        /* color: white; */
+        /* box-shadow: 3px 5px 0 0px rgb(3, 79, 124); */
+    }
+
+
+    /* li:hover {
+        color: #be9d18;
+        background-color: #3f0f9f;
+        font-weight: bold;
+        box-shadow: 3px 5px 0 0px #be9d18;
+        cursor: pointer;
+    } */
+
+    a {
+        text-decoration: none;
+    }
+
+    input {
+        /* padding: 15px 40px; */
+        height: 40px;
+        /* border: 1px solid black; */
+        border: white;
+    }
+
+    button {
+        margin-left: 20px;
+        border: 1px solid black;
+        padding: 0 15px 0 15px;
+        background: linear-gradient(to right, #89f7fe, #66a6ff);
+    }
+
+    button:hover {
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+
+    }
+}
+
+.search {
+    border: 1px solid black;
+    justify-content: space-between;
+    display: flex;
+    background-color: #ffff;
+    padding: 5px 30px;
+}
+
+svg {
+    margin: 12px;
+}
+
+.search1 {
+    display: flex;
+}
+
+
+
+/* Error Page */
+.error {
+    text-align: center;
+    align-items: center;
+
+}
+
+
+/* ProductIntem */
+.productsCard {
+    width: 450px;
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* align-self: stretch; */
+    box-shadow: 3px 5px 0 3px rgb(105, 166, 201);
+    display: inline-block;
+}
+/* .productsCard:hover{
+    background-color: #0096c7;
+    color: #f5f5f5;
+    box-shadow: 5px 8px 0 5px rgb(1, 45, 70);
+} */
+
+/* ProductDetals  */
+.productDetails {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px;
+    width: 80%;
+
+    img {
+        height: fit-content;
+    }
+}
+.productDetails:hover{
+    background-color: #0096c7;
+    color: #f5f5f5;
+    box-shadow: 5px 8px 0 5px rgb(1, 45, 70);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.detail{
+    /* border: 1px solid black; */
+    
+}
+
+
+
+
+/* Cart */
+
+.cart {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartsection {
+    /* background-color: aqua; */
+    width: 50%;
+}
+
+.cartItem {
+    /* margin: 8px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: purple; */
+    padding: 15px;
+
+    h1 {
+        font-weight: bolder;
+    }
+}
+.cartItem2{
+    border: 1px solid black;
+    margin: 30px;
+    background-color: #ffff;
+
+}
+.remove{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    /* background-color: maroon; */
+    text-align: end;
+    margin-right: 10px;
+}
+
+.totalCart {
+    /* background-color: chartreuse; */
+    width: 50%;
+
+    h1 {
+        font-weight: bolder;
+        font-size: larger;
+    }
+}
+
+.total {
+    align-items: center;
+    padding: 70px;
+    
+}
+.backToHome{
+    
+}
+.clrbtn {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        background-color: darkblue;
+        color: white;
+        padding: 20px;
+        margin: 15px;
+        margin-left: 30px;
+    }
+}
+.add-cartbtn {
+    /* margin-bottom: 10px; */
+    padding: 10px 15px;
+    margin: 15px;
+    background-color: red;
+    color: white;
+    font-size: large;
+    box-shadow: 3px 5px 0 0px rgb(3, 79, 124);
+    
+}
+.add-cartbtn:hover{
+    color: #be9d18;
+    background-color: #3f0f9f;
+    font-weight: bold;
+    box-shadow: 3px 5px 0 0px #be9d18;
+    cursor: pointer;
+}
