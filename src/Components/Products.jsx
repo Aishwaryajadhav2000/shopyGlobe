@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+// Product Component to call the API
 export default function Products({ category = '', searchText = '' } = {}) {
     const [allProducts, setAllProducts] = useState([]);
     const [error, setError] = useState();

@@ -11,16 +11,18 @@ function App() {
   const [searchText , setSearchText] = useState('');
   const [searchInput, setSearchInput] = useState('');
 
+  // Main Component
   return (
     <Provider store={appStore}>
-     
+
+
+     {/* Header Component */}
         <Header onCategoryChange={setCategory}
         setSearchInput={setSearchInput}
           onSearch={(text) => {setSearchText(text)}}
           clearSearchText={() => setSearchText('')}>
 
         </Header>
-        {/* <ProductItem></ProductItem> */}
      
         <Outlet context={{category, searchText}}></Outlet>
 

@@ -4,6 +4,7 @@ import Products from './Products';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../utils/cartSlice';
 
+// Product Details display all info about Product
 export default function ProductDetails() {
 
     const params = useParams();
@@ -12,7 +13,7 @@ export default function ProductDetails() {
     const bookDetails = allProducts.filter(product => product.id == params.id)
     console.log("bookdetail", bookDetails)
 
-    
+
     const dispatch = useDispatch()
     function addToCart(item) {
         dispatch(addItem(item))
@@ -38,9 +39,9 @@ export default function ProductDetails() {
                     ) :
                         (bookDetails.map((product) => (
 
-                            <section className=' '>
+                            <section className=''>
 
-                                <h3 className="text-3xl font-bold title text-blue-700">{product.title}</h3>
+                                <h3 className="text-3xl font-bold title text-blue-900 ">{product.title}</h3>
 
                                 <section className=' border-4 productDetails'>
                                     <article>
@@ -66,8 +67,28 @@ export default function ProductDetails() {
                                                 {product.rating}
                                             </b>
                                         </p>
-                                        <p>Price : <b> {product.price} (<b>{product.discountPercentage}% OFF</b> )</b></p>
+                                        <p>
+                                            Reviews :
+                                            <ol className='list-decimal pl-5'>
+                                                {product.reviews?.map((review, index) => (
+                                                    <li key={index}>
+                                                        <p>Review From : {review.reviewerEmail}
+                                                            <ul className='list-disc pl-5 text-red-700'>
+                                                                <li>Reviewer Name : {review.reviewerName}</li>
+                                                                <li>Comment :{review.comment}</li>
+                                                                <li>Rating : {review.rating}</li>
+                                                            </ul>
 
+                                                        </p>
+
+                                                    </li>
+                                                ))}
+                                            </ol>
+
+                                        </p>
+                                        <p>Price : <b > {product.price} (<b className='text-red-500'>{product.discountPercentage}% OFF</b> )</b></p>
+
+                                        {/* Add to cart Button and redirect to cart page */}
                                         <Link to={'/cart'}>
                                             <button onClick={() => addToCart(product)}
                                                 className="mt-3 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
