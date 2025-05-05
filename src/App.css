@@ -259,4 +259,8 @@ svg {
     box-shadow: 3px 5px 0 0px #be9d18;
     cursor: pointer;
 }
-
+.placeOrder{
+    width: 100vh;
+    display: block;
+    background-color: red;
+}

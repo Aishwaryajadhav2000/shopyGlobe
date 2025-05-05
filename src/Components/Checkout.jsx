@@ -14,6 +14,16 @@ export default function Checkout() {
     const dispatch = useDispatch();
 
     function placeOrder() {
+
+        // e.preventDefault();
+        // if (e.target.fullName.value == "") {
+        //     alert("Please fill all the details...")
+        // } else {
+        //     dispatch(clearCart())
+        //     // navigation("/")
+        //     setOrderConfirm(true)
+        // }
+
         dispatch(clearCart())
         // navigation("/")
         setOrderConfirm(true)
@@ -60,19 +70,24 @@ export default function Checkout() {
                                     <div className="mb-8">
                                         <h3 className="text-xl font-semibold mb-4">Shipping Details</h3>
                                         <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                            <input className="border p-2 rounded" type="text" placeholder="Full Name" required />
-                                            <input className="border p-2 rounded" type="email" placeholder="Email" required />
-                                            <input className="border p-2 rounded" type="number" placeholder="Phone" required />
-                                            <input className="border p-2 rounded" type="text" placeholder="Address" required />
-                                            <input className="border p-2 rounded md:col-span-2" type="text" placeholder="City, State, Zip" required />
+                                            <input className="border p-2 rounded" type="text" placeholder="Full Name" required name="fullName" />
+                                            <input className="border p-2 rounded" type="email" placeholder="Email" required name="email" />
+                                            <input className="border p-2 rounded" type="number" placeholder="Phone" required name="phone" maxLength={10} />
+                                            <input className="border p-2 rounded" type="text" placeholder="Address" required name="address" />
+                                            <input className="border p-2 rounded md:col-span-2" type="text" placeholder="City, State, Zip" name="address2" required />
+
+                                            <div>
+                                                <button onClick={placeOrder} className="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 font-semibold ">
+                                                    Place Order
+                                                </button>
+                                            </div>
+
                                         </form>
                                     </div>
 
                                     {/* Place Order Button */}
 
-                                    <button onClick={placeOrder} className="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 font-semibold">
-                                        Place Order
-                                    </button>
+
                                 </div>
                             )
                         }
@@ -85,12 +100,12 @@ export default function Checkout() {
                     <div className='bg-blue-500 h-screen items-center flex justify-center'>
 
                         <p className='border-4 border-double p-12 font-bold text-3xl text-white'>
-                           
+
                             Order Place Successfully <br />
                             <Link to={'/'}>
                                 <button className='px-6 py-3 rounded-lg mr-3 mt-4
                                      bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-purple-400 hover:to-indigo-600'>
-                                     Back To Home
+                                    Back To Home
                                 </button>
                             </Link>
                         </p>
